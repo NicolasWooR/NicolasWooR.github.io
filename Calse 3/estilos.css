@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(239, 224, 166);
+    color:#508b65;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+div{
+    border:4px white solid;
+}
+#contenedor{
+    border: 4px yellow solid;
+    display: grid;
+    flex-direction: row-reverse;
+    flex-wrap:nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    color:#508b65;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 3fr;
+    
+}
+#encabezado{
+    color: black;
+    background-color: rgb(51, 68, 150);
+    font-family: 'Times New Roman', Times, serif;
+}
+#elemento{
+    color:black
+}
+
+

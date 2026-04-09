@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clase antes de vacaciones</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://jsdelivr.net">
+</head>
+<body >
+  <div id="encabezado">
+
+  </div>
+
+   <div id="contenedor">
+     <div class="elemento"> Sección 1</div>
+     <div class="elemento"> Sección 2</div>
+     <div class="elemento"> Seccion 3</div>
+   </div> 
+  <div id="Texti">
+    Link
+  </div>
+  <div id="Jason">
+    Json
+  </div>
+
+  
+<button id="Nicolas" type="button">click</button>
+Jelly Fish let's fuking gOOOOO
+ <div id="Artist">
+    Mi artista favorito
+    <button id="Pierce" type="button">click</button>
+  </div>
+  <div id="Mitri">Artista favorito de Mitri
+    <button id="Mitri" type="button">click</button>
+  </div>
+  <style >
+
+
+  </style>
+   
+   
+
+  
+
+  
+<script >
+      /*Clase 4 #Java script*/
+      let t=1986;
+      const c=3.28;
+      console.log("lols")
+      let p={"titulo":"Llano en llamas","autor":"Juan Rulfo"}
+      let d=document.createElement("p")
+    
+      d.textContent="Hola"
+      document.getElementById("encabezado").appendChild(d);
+      d.setAttribute("style","color:yellow")
+      d.setAttribute("border","14px black")
+
+      async function obternerJSONH() {
+        const respuesta = await fetch('archivo.json');
+        const datos = await respuesta.json();
+        console.log(datos);
+        let a=document.createElement("p")
+        a.textContent= datos.autor
+        document.getElementById("Jason").appendChild(a);
+      }
+      obternerJSONH();
+     
+      
+      async function obternerJSON() {
+        const respuesta = await fetch('http://openlibrary.org/subjects/love.json?published_in=1500-1600');
+        const datos = await respuesta.json();
+        console.log(datos);
+        let a=document.createElement("p")
+        a.textContent= datos.works[0].title;
+        document.getElementById("Texti").appendChild(a);
+      }
+      obternerJSON()
+      /*Clase 5 #Java script*/
+      async function obtenerArt() {
+        const respuesta = await fetch('https://www.theaudiodb.com/api/v1/json/123/search.php?s=pierce+the+veil');
+        const datos = await respuesta.json();
+        console.log(datos);
+        let a=document.createElement("p")
+        a.textContent= datos.artists[0].strBiography;
+        document.getElementById("Artist").appendChild(a);
+        var imagen = document.createElement("img");
+        imagen.style.width = "300px";
+        imagen.src = "https://d1rs3px2gf3dlr.cloudfront.net/media/blog/featured/PtVBand.jpg";
+        document.getElementById("Artist").appendChild(imagen);
+      }
+      async function obtenerMitri() {
+        const respuesta = await fetch('https://www.theaudiodb.com/api/v1/json/123/search.php?s=deftones');
+        const datos = await respuesta.json();
+        console.log(datos);
+        let a=document.createElement("p")
+        a.textContent= datos.artists[0].strBiography;
+        document.getElementById("Mitri").appendChild(a);
+        var imagen = document.createElement("img");
+        imagen.style.width = "300px";
+        imagen.src = "https://www.yaconic.com/wp-content/uploads/2025/07/Deftones-1024x680.webp";
+        document.getElementById("Mitri").appendChild(imagen);
+      }
+      
+      document.getElementById("Nicolas").addEventListener("click",obternerJSON)
+      document.getElementById("Pierce").addEventListener("click",obtenerArt)
+      document.getElementById("Mitri").addEventListener("click",obtenerMitri)
+</script>
+
+
+
+</body>
+</html>
