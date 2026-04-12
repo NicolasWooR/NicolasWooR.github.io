@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    font-family: 'Times new roman' Times, serif, sans-serif;
+    background-color: hsl(0, 0%, 92%); 
+    color: #14181b;
+}
+header{
+    position:relative;
+    left: 0;
+    background-color: white;
+    padding: 30px 15px;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgb(61, 61, 61);
+}
+.topbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: rgb(3, 69, 74);
+    font-size: 32px;
+    font-weight:bolder;
+
+}
+.n{
+    background-color: aliceblue;
+    width: 100%;
+    margin-top: 0;
+}
+
+.act1{
+    width: 40%;
+    margin: 30px;
+}
+
+.comp{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
+.tareas{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 20px;
+    padding: 42px 0;
+    border-radius: 22px;
+
+}
+
+article{
+    background:  rgb(243, 243, 243);
+    border-radius: 12px;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 2px 5px ;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
